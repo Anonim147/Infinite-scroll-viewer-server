@@ -1,0 +1,25 @@
+type Query {
+    images(page:Int, query:String):[Image!]
+    image(id:String!): Image 
+}
+
+type Image {
+    id: String!
+    description: String
+    alt_description: String
+    urls : Url!
+    user: User!
+}
+
+type Url {
+    raw: String
+    full: String
+    small: String
+    regular: String
+}
+
+type User {
+    name:String!
+    username:String
+    bio:String
+}
